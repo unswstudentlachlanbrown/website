@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<link rel="stylesheet" type="text/css" href="style.css"/>
-	<title>My First Website</title>
-</head>
 
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:80%; }
+        sidebar { position:fixed; left: 80%; padding: 1%; text-align: left; }
+    </style>
+</head>
 <body>
 
- <div class="topnav" id="myTopnav">
- <a href="index.hrml">Home</a>
- <a href="page1.html">Page1</a>
- <a href="page2.html">Page2</a>
- </div>
-
-<h1>This is a website</h1>
-<p>paragraph text goes here</p><br>and here is the next line</br>
-<img src="https://cdn.pixabay.com/photo/2015/07/06/13/58/arlberg-pass-833326_960_720.jpg" alt="image missing" style="width:25%" />
-
-<footer>
-<a href="https://github.com/unswstudentlachlanbrown"> your footer text here </a>
-</footer>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2l2ZS1tZS1tYXAiLCJhIjoiY2o2dm5hZGQ4MHdyNDMzdGJkYXkxN3U3ZyJ9.iG_kh8kFm5xKv3DPO0dzrw';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [151.209900, -33.865143], //starting position
+    zoom: 10
+});
+</script>
+<sidebar>
+<H1>Map of Sydney</H1>
+<p>This is a map of the city of Sydney, I will be putting visual data onto it, the topic will be concerning the 2016 cenus G39-dwelling structures by family and household composition</p>
+</sidebar>
 </body>
-
 </html>
